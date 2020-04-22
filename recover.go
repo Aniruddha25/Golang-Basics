@@ -23,6 +23,10 @@ func div(a,c int)(int,error){
   return a/c,nil;
 
 }
+/*The defer keyword is generally used for cleaning purpose. The defer keyword postpones the execution of a function or statement until the end of the calling function.
+
+It executes code (a function or expression) when the enclosing function returns before the closing curly brace }. It is also executed if an error occurs during the execution of the enclosing function.
+*/
 func squareroot(b float64) float64{
  defer func(){
   fmt.Println(recover());
@@ -43,6 +47,11 @@ func main() {
   }
   p:=squareroot(64);
   fmt.Println(p);
+  defer print("Hello");
 
 
+}
+func print(s string)
+{
+	fmt.Println(s);
 }
